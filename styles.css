@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+section{
+    scroll-snap-align: start;
+}
+.background{
+    width: 100;
+    height: 100vh;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), linear-gradient(rgba(0, 0, 0, 0.5), rgba(174, 0, 255, 0.5)), url('/assets/backgrounds/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    animation-name: startanimation;
+    animation-duration: 0.5s;
+    
+}
+@keyframes startanimation {
+    0%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(174, 0, 255, 0.5)), url('/assets/backgrounds/background1.jpg');
+        
+    }
+    100%{
+
+    }
+
+}
+
+.texto{
+    display:grid;
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+    animation-name: fadeInLeft;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(1,0,.27,1.01);
+}
+@keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      top: 60%;
+    }
+    100% {
+      opacity: 1;
+      top: 50%;
+    }
+}
+
+#ftitle{
+    position: relative;
+    font-size: 120px;
+    margin: 10 0 30px;
+    line-height: 80px;
+    font-family: 'Poppins', bold;
+}
+
+
+#fstitle{
+    font-size: 30px;
+    margin: 10 0 30px;
+    line-height: 80px;
+}
+#buttonstart{
+    font-size: 20px;
+    color: #fbfcfd;
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    bottom: -30px;
+    transition: background 1 ease-in;
+}
+#buttonstart:hover {
+    background:#AC3DAA
+ }
+#id{
+    display: flex;
+    align-items: flex-end;
+}
+.icon{
+    padding-top: 6%;
+    padding-right: 10%;
+    position: relative;
+    float: right;
+    width: 450px;
+    height: 450px;
+    animation-name: iconAnim;
+    animation-duration: 1s;
+    
+}
+@keyframes iconAnim {
+    0%{
+        opacity: 0%;
+        padding-right: 0%;
+    }
+    40%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+        padding-right: 10%;
+    }
+}
+.arrow{
+    width: 500px;
+    height: 500px;
+}
+.topbar{
+    position: relative;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 150px;
+    animation-name: fadeInTopB;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.45,-0.01,0,1.01);
+}
+.topbaritens{
+    text-shadow: #777 0px 0 10px;
+    font-size: 34px;
+    color: #fbfcfb;
+    margin: 40px;
+    text-decoration: none;
+    transition: color 0.5s, text-shadow 0.5s;
+}
+.topbaritens:hover {
+    font-weight: bold;
+    color: #AC3DAA;
+    text-shadow: #af74ae 0px 0 10px;
+ }
+ @keyframes fadeInTopB{
+    0% {
+      opacity: 0;
+      top: -10%;
+    }
+
+    100% {
+      opacity: 1;
+      top: 0%;
+    }
+}
+
+
+
+ .backgroundp2{
+    width: 100;
+    height: 106vh;
+    background-color: #101010;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    animation-name: startanimation;
+    animation-duration: 0.5s;
+ }
+ .textP2{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    padding: 12px 12px;
+    color: #ffffff;
+    background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-weight: 600;
+    font-size: 36px;
+    text-decoration: none;
+    white-space: nowrap;
+ }
+ @keyframes shine{
+  0%{
+    background-position: 0;
+  }
+  60%{
+    background-position: 150px
+  }
+  100%{
+    background-position: 400px}
+}
+.textInfo{
+    display: grid;
+    top: 25%;
+    left: -10%;
+    word-break:normal;
+    padding: 30px 400px;
+    font-size: 60px;
+    position: relative;
+    color: #AC3DAA;
+    overflow: hidden;
+    animation: slideIn 1s;
+}
+@keyframes slideIn {
+    from{
+        opacity: 0;
+        top: 40%;
+    }
+}
+.backgroundp3{
+    width: 100;
+    height: 100vh;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+#selection3Text1{
+    background-position: right;
+    color: white;
+    position: relative;
+    top: 60px;
+    padding: 50px 50px;
+    display: grid;
+
+    text-align: center;
+    font-size: 60px;
+    background-size: 0%;
+    background-image: linear-gradient(grey,grey);
+    opacity: 1;
+    animation-name: animacaogenerica;
+    animation-duration: 1s;
+}
+#typer{
+    height: 50px;
+    size: 30;
+}
+@keyframes animacaogenerica {
+    0%{
+        font-size: 50px;
+        color: transparent;
+    }100%{
+        font-size: 60px;
+        color: white;
+    }
+}
+
+
+.selection3Text{
+    width: 40ch;
+    position:absolute;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    padding: 150px;
+    left: 0%;
+    animation: textanim 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@keyframes textanim {
+    0%{
+        opacity: 0;
+        left: -10%;
+    }100%{
+        opacity: 1;
+        left: 0%;
+    }
+}
+
+.hover-underline-animation {
+    border-bottom: 4px;
+    color: #AC3DAA;
+    animation-name: underlinetext;
+    animation-duration: 2s;
+    text-decoration-thickness: 8;
+    display: inline-block;
+    position: relative;
+    color: 
+    #AC3DAA;
+    
+    
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: 
+    #AC3DAA;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.stats__item-bar{   
+    background-color: wheat;
+}
+.scrollbar.sticky {
+    position: fixed;
+    top: 0;
+  }
